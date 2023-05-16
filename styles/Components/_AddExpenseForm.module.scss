@@ -1,0 +1,134 @@
+@import '~styles/_variables.scss';
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 0 5rem;
+
+  .error {
+    height: 2rem;
+    padding: 0.5rem;
+    width: 100%;
+    font-size: 0.8rem;
+    color: red;
+    text-align: center;
+  }
+
+  .inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .amount_input {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50%;
+      background-color: white;
+      outline: none;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+      text-align: center;
+      font-size: 2rem;
+      padding: 0.5rem;
+      border: double 3px transparent;
+      border-radius: 3rem;
+      background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+      background-image: linear-gradient(white, white),
+        linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+      background-origin: border-box;
+      background-clip: padding-box, border-box;
+
+      &:focus::placeholder {
+        color: transparent;
+      }
+    }
+
+    .extra_info {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+
+      input {
+        width: 85%;
+        background-color: white;
+        border-radius: 1rem;
+        border: 2px solid transparent;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        text-align: center;
+        font-family: $font-comforta;
+        font-size: 0.9rem;
+        padding: 0.8rem;
+
+        &:focus {
+          border: 2px solid $color-1;
+        }
+
+        &:focus::placeholder {
+          color: transparent;
+        }
+      }
+    }
+  }
+
+  .title {
+    font-size: 1rem;
+    color: $textColorDarkGray;
+    width: 100%;
+    text-align: center;
+    padding: 0.5rem;
+  }
+
+  .category_btns {
+    margin: 1rem 0 1rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: white;
+      border-radius: 1rem;
+      border: none;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+      text-align: center;
+      font-family: $font-comforta;
+      font-size: 0.8rem;
+      padding: 1.2rem;
+      overflow: hidden;
+      cursor: pointer;
+
+      &:focus {
+        background: $color-1;
+        color: $textColorWhite;
+      }
+    }
+
+    .new_category_btn {
+      border: 2px dashed $textColorGray;
+      font-size: 1.5rem;
+      color: $textColorGray;
+      padding: 0.8rem;
+
+    }
+  }
+
+  .submit_btn {
+    width: 80%;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    outline: none;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    color: $textColorWhite;
+    letter-spacing: 0.2rem;
+    margin-top: auto;
+
+  }
+}
