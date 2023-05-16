@@ -6,6 +6,7 @@ import ExpensesList from './ExpensesList';
 const Home = () => {
   return (
     <section>
+      f
       <BalanceDisplay />
       <ExpensesList />
     </section>
