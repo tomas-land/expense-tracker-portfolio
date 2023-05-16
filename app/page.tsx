@@ -3,7 +3,7 @@ import BalanceDisplay from './BalanceDisplay';
 import ExpensesList from './ExpensesList';
 
 
-const Home = async () => {
+const Home = () => {
   return (
     <section >
       <BalanceDisplay />
