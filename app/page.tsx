@@ -5,9 +5,9 @@ import ExpensesList from './ExpensesList';
 
 const Home = () => {
   return (
-    <section >
-      <BalanceDisplay />
-      <ExpensesList />
+    <section>
+      {/* <BalanceDisplay />
+      <ExpensesList /> */}
     </section>
   )
 }
