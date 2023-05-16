@@ -3,12 +3,13 @@ import BalanceDisplay from './BalanceDisplay';
 import ExpensesList from './ExpensesList';
 
 
-export default function Home() {
+const Home = () => {
   return (
-    <main >
-gvgggggggggggggggggggggg
-    </main>
+    <section>
+      <BalanceDisplay />
+      <ExpensesList />
+    </section>
   )
 }
 
-
+export default Home
