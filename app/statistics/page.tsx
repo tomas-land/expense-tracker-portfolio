@@ -18,9 +18,6 @@ const StatsPage = async () => {
   const totalAmountExpenses = await getTotalAmountExpenses();
   const previousMonthTotalAmountExpenses = await getPreviousMonthTotalAmountExpenses();
 
-  // console.log('///////////////////////////////////start')
-  // console.dir(categoriesWithExpenses, {depth: null})
-  // console.log('///////////////////////////////////finish')
   return (
     <section className={s.stats_page}>
       <TopButtons/>
