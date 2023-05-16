@@ -6,6 +6,8 @@ import TopButtons from './TopButtons'
 import { getCategories } from '@lib/prisma/categories'
 //Interfaces
 import { iCategory } from '@lib/interfaces'
+//Styles
+import s from '@styles/Pages/_AddExpensePage.module.scss'
 
 
 export const dynamic = 'force-dynamic'
@@ -13,7 +15,7 @@ export const dynamic = 'force-dynamic'
 const AddExpansePage = async () => {
   const categories: iCategory[] = await getCategories();
   return (
-    <section>
+    <section className={s.add_page}>
       <TopButtons />
       <AddExpenseForm categories={categories} />
     </section>

@@ -1,4 +1,3 @@
-
 @import '_variables.scss';
 
 * {
@@ -39,6 +38,7 @@ main {
 @media screen and (max-width: 768px) {
   main {
     border-radius: 0;
+    margin: 0;
   }
 }
 
