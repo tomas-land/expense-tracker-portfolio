@@ -9,13 +9,13 @@ export default function RootLayout({ children }: { children: any }) {
   return (
     <html>
       <body>
-        <main>
+        {/* <main>
           <div className="wrapper">
-            {/* <AppProvider> */}
+            <AppProvider>
               {children}
-            {/* </AppProvider> */}
+            </AppProvider>
           </div>
-        </main>
+        </main> */}d
       </body>
     </html >
   )
