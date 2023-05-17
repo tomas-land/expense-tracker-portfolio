@@ -9,6 +9,7 @@
     color: red;
     text-align: center;
   }
+
   .modal_overlay {
     position: fixed;
     top: 0;
@@ -93,7 +94,7 @@
           color: $textColorWhite;
           letter-spacing: 0.2rem;
           margin-top: auto;
-      
+          cursor: pointer;
         }
       }
     }
