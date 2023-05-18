@@ -57,3 +57,10 @@ ul,
 li {
   list-style: none;
 }
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include loader();
+}
