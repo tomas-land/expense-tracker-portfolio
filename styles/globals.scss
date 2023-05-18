@@ -1,4 +1,5 @@
 @import '_variables.scss';
+@import '_mixins.scss';
 
 * {
   box-sizing: border-box;
@@ -13,6 +14,9 @@ body {
 
 
 main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: $color-bg;
   max-width: 425px; // selected this width to preview as mobile screen on larger screens
   height: 780px;
@@ -20,6 +24,8 @@ main {
   overflow-y: scroll;
   border: 1px solid rgb(156, 155, 155);
   border-radius: 2rem;
+
+
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -59,6 +65,7 @@ li {
 }
 
 .loader {
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
