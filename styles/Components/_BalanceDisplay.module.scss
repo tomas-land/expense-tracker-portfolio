@@ -12,10 +12,14 @@
     justify-content: space-between;
     padding: 0 1rem;
 
-    a {
+    button {
       display: flex;
       align-items: center;
       justify-content: center;
+      background-color: transparent;
+      outline: none;
+      border: none;
+      cursor: pointer;
     }
   }
 

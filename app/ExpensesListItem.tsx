@@ -17,7 +17,7 @@ import { ImBin } from 'react-icons/im'
 interface iProps {
   expense: iExpense;
 }
-
+          
 const ExpensesListItem = ({ expense }: iProps) => {
 
   const { id, amount, desc, category, createdAt } = expense
