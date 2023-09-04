@@ -2,7 +2,7 @@
 import BalanceDisplay from './BalanceDisplay';
 import ExpensesList from './ExpensesList';
 
-export const dynamic = 'dynamic'
+export const dynamic = 'force-dynamic'
 
 const Home = () => {
   return (

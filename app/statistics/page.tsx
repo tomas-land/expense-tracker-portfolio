@@ -10,7 +10,7 @@ import { getCategoriesWithExpenses } from '@lib/prisma/expenses_by_category'
 //Styles
 import s from '@styles/Pages/_StatsPage.module.scss'
 
-export const dynamic = 'dynamic'
+export const dynamic = 'force-dynamic'
 
 
 const StatsPage = async () => {
