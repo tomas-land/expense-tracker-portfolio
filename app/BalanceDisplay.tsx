@@ -2,6 +2,7 @@
 
 //react
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 //Internal Lib
 import { useExpensesSWR } from '@lib/hooks/useSWRrequest';
 //Icons
@@ -13,17 +14,15 @@ const BalanceDisplay = () => {
   const router = useRouter();
   const { expenses, mutate, error, isLoading }: any = useExpensesSWR();
 
-  const totalAmountExpenses = expenses
-    ?.map((item: any) => item.amount)
-    .reduce((prev: number, curr: number) => prev + curr, 0);
+  const totalAmountExpenses = expenses?.map((item: any) => item.amount).reduce((prev: number, curr: number) => prev + curr, 0);
 
   return (
     <>
       <div className={s.display}>
         <div className={s.btn_wrapper}>
-          <button type="button" onClick={() => router.push('/statistics')}>
-            <IoMdStats fill="white" size="1.5rem" />
-          </button>
+          <Link href={'/statistics'}>
+            <IoMdStats fill="white" size="1.4rem" />
+          </Link>
           <button type="button" onClick={() => router.push('/add-expense')}>
             <IoMdAdd fill="white" size="1.8rem" />
           </button>
