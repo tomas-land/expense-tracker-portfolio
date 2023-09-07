@@ -14,6 +14,8 @@ body {
 
 
 main {
+  position: relative;
+  z-index: 1011;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,6 +26,7 @@ main {
   overflow-y: scroll;
   border: 1px solid rgb(156, 155, 155);
   border-radius: 2rem;
+ 
 
 
 }

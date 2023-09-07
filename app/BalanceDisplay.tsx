@@ -1,14 +1,13 @@
-"use client";
+'use client';
 
 //react
-import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { useRouter } from 'next/navigation';
 //Internal Lib
-import { useExpensesSWR } from "@lib/hooks/useSWRrequest";
+import { useExpensesSWR } from '@lib/hooks/useSWRrequest';
 //Icons
-import { IoMdStats, IoMdAdd } from "react-icons/io";
+import { IoMdStats, IoMdAdd } from 'react-icons/io';
 //Styles
-import s from "@styles/Components/_BalanceDisplay.module.scss";
+import s from '@styles/Components/_BalanceDisplay.module.scss';
 
 const BalanceDisplay = () => {
   const router = useRouter();
@@ -22,10 +21,10 @@ const BalanceDisplay = () => {
     <>
       <div className={s.display}>
         <div className={s.btn_wrapper}>
-          <button type="button" onClick={() => router.push("/statistics")}>
+          <button type="button" onClick={() => router.push('/statistics')}>
             <IoMdStats fill="white" size="1.5rem" />
           </button>
-          <button type="button" onClick={() => router.push("/add-expense")}>
+          <button type="button" onClick={() => router.push('/add-expense')}>
             <IoMdAdd fill="white" size="1.8rem" />
           </button>
         </div>
