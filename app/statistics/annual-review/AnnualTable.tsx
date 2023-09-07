@@ -2,7 +2,6 @@ import React from 'react';
 import s from '@styles/Components/_AnnualTable.module.scss';
 import { startOFYear, currentMonth } from '@lib/dayJS/index';
 import { MdOutlineCode } from 'react-icons/md';
-import { Category } from '@mui/icons-material';
 import { getSortedMonths } from '@lib/helpers/getSortedMonths';
 
 interface iProps {
@@ -23,7 +22,7 @@ const AnnualTable = ({ categoriesWithMonthlyExpensesTotal }: iProps) => {
     });
   });
   const sortedMonths = getSortedMonths(categoriesWithMonthlyExpensesTotal);
-
+  console.log(categoriesWithMonthlyExpensesTotal);
   return (
     <div className={s.annual_table}>
       <h4 className={s.title}>Metinių išlaidų ataskaita</h4>
@@ -38,15 +37,19 @@ const AnnualTable = ({ categoriesWithMonthlyExpensesTotal }: iProps) => {
               {categories?.map((category: any) => (
                 <th key={category}>{category}</th>
               ))}
+              <th>Suma</th>
             </tr>
           </thead>
           <tbody className={s.table_body}>
             {sortedMonths.map((month: string) => (
               <tr>
-                <td className={s.months_column} key={month}>{month}</td>
+                <td className={s.months_column} key={month}>
+                  {month}
+                </td>
                 {categoriesWithMonthlyExpensesTotal?.map((item: any) => (
-                  <td key={item.category}>{item.monthlyTotal[month] || '0'}</td>
+                  <td key={item.category}>{item.monthlyTotal[month] || '-'}</td>
                 ))}
+                <td>{categoriesWithMonthlyExpensesTotal?.reduce((total, item) => total + (item.monthlyTotal[month] || 0), 0)}</td>
               </tr>
             ))}
           </tbody>
