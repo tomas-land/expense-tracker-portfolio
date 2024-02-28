@@ -12,7 +12,7 @@ import s from '@styles/Components/_BalanceDisplay.module.scss';
 
 const BalanceDisplay = () => {
   const router = useRouter();
-  const { expenses, mutate, error, isLoading }: any = useExpensesSWR();
+  const { expenses }: any = useExpensesSWR();
 
   const totalAmountExpenses = expenses?.map((item: any) => item.amount).reduce((prev: number, curr: number) => prev + curr, 0);
 

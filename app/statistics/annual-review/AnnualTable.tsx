@@ -42,8 +42,8 @@ const AnnualTable = ({ categoriesWithMonthlyExpensesTotal }: iProps) => {
           </thead>
           <tbody className={s.table_body}>
             {sortedMonths.map((month: string) => (
-              <tr>
-                <td className={s.months_column} key={month}>
+              <tr key={month}>
+                <td className={s.months_column} >
                   {month}
                 </td>
                 {categoriesWithMonthlyExpensesTotal?.map((item: any) => (

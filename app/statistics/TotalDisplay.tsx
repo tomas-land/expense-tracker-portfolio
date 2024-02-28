@@ -15,7 +15,7 @@ const TotalDisplay = ({ totalAmountExpenses, previousMonthTotalAmountExpenses }:
       <div className={s.current_and_prev_months}>{currentMonthLT} <span className={s.prev_month}>/ {previousMonthLT}</span></div>
       <div className={s.total}>
         <span>- {totalExpenses || totalAmountExpenses._sum.amount}</span>
-        <span className={s.prev_month_total}>/ {previousMonthTotalAmountExpenses._sum.amount}</span>
+        <span className={s.prev_month_total}>/ - {previousMonthTotalAmountExpenses._sum.amount}</span>
         <MdOutlineEuro className={s.euro_icon} size={12} color='gray' />
       </div>
     </div>
